@@ -1,3 +1,4 @@
+import random
 def encrypt(a, n):
     if a%2==1:
         b=(a*a-1)/2
@@ -21,3 +22,12 @@ encrypt(a, n)
 cypher=int(input("Enter cyphertext:"))
 n1=int(input("Enter private key n:"))
 decrypt(cypher, n1)
+index=int(input("Random generate some plains and cypers, how many would you like?"))
+max=int(input("what is the max integer for the plain text (and key)?"))
+for i in range (index):
+  a= random.randint(3, max)
+  n = random.randint(3, max)
+  print("Plaintext:", a, " Key (n):", n)
+  encrypt(a, n)
+
+
